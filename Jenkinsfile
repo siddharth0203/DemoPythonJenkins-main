@@ -73,7 +73,7 @@ pipeline {
         expression { currentBuild.result == null || currentBuild.result == 'SUCCESS' }
       }
       steps {
-        withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', credentialsId: "${AWS_CREDS}"]]) {
+        withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', credentialsId: 'ecr-creds']]) {
           script {
             echo "🔐 Logging in to AWS ECR..."
             sh """
@@ -84,6 +84,7 @@ pipeline {
         }
       }
     }
+
   }
 
   post {
