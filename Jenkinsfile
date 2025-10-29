@@ -21,8 +21,7 @@ pipeline {
         echo "📦 Cloning repository..."
         git branch: 'main',
             url: 'https://github.com/siddharth0203/DemoPythonJenkins-main.git',
-            credentialsId: 'Github-ID
-            '
+            credentialsId: 'Github-ID'
       }
     }
 
