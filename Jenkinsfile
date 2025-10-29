@@ -6,8 +6,8 @@ pipeline {
     AWS_CREDS = credentials('ecr-creds')
 
     // 🪣 AWS region & repo details
-    AWS_REGION = "us-east-1" // Change if your ECR is in a different region
-    ECR_REPO = "123456789012.dkr.ecr.us-east-1.amazonaws.com/siddharth-test" // replace with your actual ECR repo URI
+    AWS_REGION = "ap-south-1" // Change if your ECR is in a different region
+    ECR_REPO = "674008111561.dkr.ecr.ap-south-1.amazonaws.com/siddharth-test" // replace with your actual ECR repo URI
   }
 
   options {
@@ -20,8 +20,9 @@ pipeline {
       steps {
         echo "📦 Cloning repository..."
         git branch: 'main',
-            url: 'https://github.com/siddharth0203/DemoPythonJenkins.git',
-            credentialsId: 'github-token'
+            url: 'https://github.com/siddharth0203/DemoPythonJenkins-main.git',
+            credentialsId: 'Github-ID
+            '
       }
     }
 
